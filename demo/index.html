@@ -1,0 +1,19 @@
+<html>
+
+<body>
+  <do-greet name="Eu"></do-greet>
+
+  <script type="text/javascript" src="es2015-polyfills.js" nomodule></script>
+  <script type="text/javascript" src="scripts.js"></script>
+  <script type="text/javascript" src="zone.min.js"></script>
+  <script type="text/javascript" src="main.js"></script>
+
+  <script>
+    const el = document.querySelector('do-greet');
+    el.addEventListener('greet', (evt) => {
+      alert(evt.detail);
+    });
+  </script>
+</body>
+
+</html>
