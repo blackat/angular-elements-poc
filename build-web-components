@@ -1,0 +1,11 @@
+#!/bin/bash
+ng build poc-elements --prod --output-hashing none --single-bundle true
+cp dist/poc-elements/main.js demo
+cp dist/poc-elements/es2015-polyfills.js demo
+cp .\dist\poc-elements\scripts.js demo
+cp .\node_modules\zone.js\dist\zone.min.js demo
+
+cp dist/poc-elements/main.js ../poc-elements-react/public/assets
+cp dist/poc-elements/es2015-polyfills.js ../poc-elements-react/public/assets
+cp .\dist\poc-elements\scripts.js demo
+cp .\node_modules\zone.js\dist\zone.min.js ../poc-elements-react/public/assets

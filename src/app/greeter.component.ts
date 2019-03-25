@@ -17,7 +17,7 @@ export class GreeterComponent implements OnInit {
   constructor() { }
 
   doGreet() {
-    this.greet.emit('Hi, ${this.name}');
+    this.greet.emit('Hi, ' + this.name);
   }
 
   ngOnInit() { }

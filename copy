@@ -1,0 +1,5 @@
+#!/bin/bash
+cp dist/poc-elements/scripts.js ./demo
+cp dist/poc-elements/scripts.js.map ./demo
+cp dist/poc-elements/main.js ./demo
+cp dist/poc-elements/main.js.map ./demo

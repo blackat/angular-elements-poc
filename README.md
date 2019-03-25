@@ -50,7 +50,7 @@ Comment the tag to prevent people using the component directly
   - [node](https://www.npmjs.com/package/node) to very easily try out node commands using different node versions, without having to use a version manager
 - `--output-hashing` to attach and has to prevent browser cache issue
 
-### ngx-build-plaus
+### ngx-build-plus
 
 An [extension of the Angular CLI](https://github.com/manfredsteyer/ngx-build-plus), one of its features is to create a single bundle for Angular Elements.
 
@@ -72,3 +72,7 @@ Pack into a single bundle, _remember_ to copy also `zone.js` if you use the comp
 
 `npx create-react-app poc-elements-react`
 
+## Polyfill
+Polyfill code has to be added to support old browsers (mostly IE). The code of a polyfill is more verbose and run slower then the original feature it is meant to replace, Most browser can handle natively those feature, so for modern browser it is wasteful.
+
+Starting from [Angular CLI 7.3.0](https://github.com/angular/angular-cli/pull/13403) a new option is available `es5BrowserSupport` which is enabled by default. Angular CLI will then extract all the polyfills under `core-js` to a separate bundle. In the `index.html` add `<script src="es2015-polyfills.js" nomodule></script>` where `< script nomodule>` is ignored by browsers that support ES modules. Onlz old browser will load the bundle.
